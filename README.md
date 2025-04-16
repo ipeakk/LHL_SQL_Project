@@ -18,7 +18,8 @@ Key objectives were to clean the raw data, create reusable views to maintain org
 - Used sql queries to answer business questions
     
 ## Results
-(fill in what you discovered this data could tell you and how you used the data to answer those questions)
+- Some cities had clear preferences for apparel or electronics.
+- The average number of products per visitor varied significantly by region.
 
 ## Challenges 
 (discuss challenges you faced in the project)

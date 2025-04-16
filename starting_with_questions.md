@@ -4,11 +4,20 @@ Answer the following questions and provide the SQL queries used to find the answ
 **Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
 
 
-SQL Queries:
-
-
+SQL Queries: 
+```sql
+SELECT country,
+		city,
+		SUM(total_transaction_revenue) as total_revenue
+FROM clean_all_sessions
+GROUP BY country, city
+ORDER BY total_revenue DESC
+LIMIT 10;
+```
 
 Answer:
+![image](https://github.com/user-attachments/assets/bffc0151-289b-4bf0-96c3-7f45e69c86fc)
+
 
 
 
@@ -17,10 +26,16 @@ Answer:
 
 
 SQL Queries:
-
-
+SELECT  country,
+		city,
+		ROUND(AVG(product_quantity), 2) AS avg_products_ordered
+FROM clean_all_sessions
+GROUP BY country, city
+ORDER BY avg_products_ordered DESC
+LIMIT 10;
 
 Answer:
+![image](https://github.com/user-attachments/assets/e5d9e315-380d-4aab-91cf-90542d315922)
 
 
 

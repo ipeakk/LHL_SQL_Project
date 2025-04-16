@@ -24,7 +24,7 @@ Answer:
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
-
+```sql
 SQL Queries:
 SELECT  country,
 		city,
@@ -33,7 +33,7 @@ FROM clean_all_sessions
 GROUP BY country, city
 ORDER BY avg_products_ordered DESC
 LIMIT 10;
-
+```
 Answer:
 ![image](https://github.com/user-attachments/assets/e5d9e315-380d-4aab-91cf-90542d315922)
 
@@ -45,10 +45,22 @@ Answer:
 
 
 SQL Queries:
-
-
-
+```sql
+SELECT	alls.country,
+		alls.city,
+		alls.v2_product_category,
+		COUNT(DISTINCT(alls.full_visitor_id)) as visitors,
+		SUM(sr.total_ordered) as total_ordered
+FROM clean_all_sessions alls
+LEFT JOIN clean_sales_report sr
+ON sr.product_sku = alls.product_sku
+WHERE alls.v2_product_category IS NOT NULL 
+			and alls.v2_product_category != ''
+GROUP BY alls.country, alls.city, alls.v2_product_category
+ORDER BY total_ordered DESC;
+```
 Answer:
+![image](https://github.com/user-attachments/assets/1fabc491-da3b-4915-b995-d1d4c0ff5948)
 
 
 
@@ -58,7 +70,9 @@ Answer:
 
 
 SQL Queries:
+```sql
 
+```
 
 
 Answer:
@@ -71,7 +85,9 @@ Answer:
 
 SQL Queries:
 
+```sql
 
+```
 
 Answer:
 

@@ -52,15 +52,17 @@ SELECT	alls.country,
 		COUNT(DISTINCT(alls.full_visitor_id)) as visitors,
 		SUM(sr.total_ordered) as total_ordered
 FROM clean_all_sessions alls
-LEFT JOIN clean_sales_report sr
-ON sr.product_sku = alls.product_sku
+JOIN clean_sales_report sr
+ON TRIM(sr.product_sku) = TRIM(alls.product_sku)
 WHERE alls.v2_product_category IS NOT NULL 
 			and alls.v2_product_category != ''
+			and alls.product_sku IS NOT NULL
 GROUP BY alls.country, alls.city, alls.v2_product_category
 ORDER BY total_ordered DESC;
 ```
 Answer:
-![image](https://github.com/user-attachments/assets/1fabc491-da3b-4915-b995-d1d4c0ff5948)
+![image](https://github.com/user-attachments/assets/20b0c53b-42c6-41f6-bbb8-81c5c4ba1be9)
+
 
 
 

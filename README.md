@@ -18,11 +18,15 @@ Key objectives were to clean the raw data, create reusable views to maintain org
 - Used sql queries to answer business questions
     
 ## Results
-- Some cities had clear preferences for apparel or electronics.
-- The average number of products per visitor varied significantly by region.
-
+- Some cities like, "US Other", "San Francisco", "Sunnyvale","Atlanta" had highest revenue
+- Some countries like "United States", "United Kingdom" had clear preferences for "Home/Shop by Brand/YouTube/"
+- Top selling products are "17oz Stainless Steel Sport Bottle", "Ballpoint LED Light Pen", "22 oz  Bottle Infuser"
+  
 ## Challenges 
-(discuss challenges you faced in the project)
+- Missing or null values
+- Duplicate data in the csv files
+- Scaling amount values by dividing them by 1000000
+- Partial matches in the joins
 
 ## Future Goals
-(what would you do if you had more time?)
+Creating visual outputs

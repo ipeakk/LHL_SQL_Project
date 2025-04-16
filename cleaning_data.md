@@ -1,15 +1,19 @@
-What issues will you address by cleaning the data?
+# What issues will you address by cleaning the data?
 
--Missing or Null Values
+## -Missing or Null Values
   Corrected missing or null values so that they don't break or give incorrect results in calculations
--Data Formats
+  
+## -Data Formats
   Revenue and price columns were divided by 1,000,000 because they were stored as large integers
--Duplicated 
+  
+## -Duplicated 
   Used surrogate keys for duplicate value problem instead of deleting them, thinking they might need to be investigated
--Unclear Categories
+  
+## -Unclear Categories
   Collected unclear category values under 'other' value
--Renaming columns
-  renamed all the columns for better reading
+  
+## -Renaming columns
+  Renamed all the columns for better reading
 
 
 Queries:
